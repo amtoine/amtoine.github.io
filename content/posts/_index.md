@@ -14,3 +14,6 @@ color = "" #color from the theme settings
 +++
 
 my posts
+
+---
+Go back to the [front page](/).

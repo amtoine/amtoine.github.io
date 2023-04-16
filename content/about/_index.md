@@ -5,3 +5,6 @@ draft: false
 ---
 
 **ABOUT COMING SOON.**
+
+---
+Go back to the [front page](/).
