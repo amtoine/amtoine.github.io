@@ -59,11 +59,6 @@ title = "My personal website"
       logoHomeLink = "/"
 
     [[languages.en.menu.main]]
-      identifier = "front"
-      name = "Front page"
-      url = "/"
-      weight=-1
-    [[languages.en.menu.main]]
       identifier = "about"
       name = "About"
       url = "/about"
