@@ -14,7 +14,8 @@ color = "" #color from the theme settings
 +++
 
 Below here, I would like to take the time to write some blog posts some day.  
-These would probably be content about programming, linux, `nushell`, that kind of stuff.
+These would probably be content about programming, linux, `nushell`, that kind
+of stuff.
 
 # Stay tuned!!
 
