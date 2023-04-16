@@ -1,0 +1,20 @@
+{{ if .Get "align" }}
+    <p align="{{ .Get "align" }}">
+{{ else }}
+    <p align="left">
+{{ end }}
+
+{{ if .Get "italic" }}
+    {{ if .Get "bold" }}
+        <b><i>{{ .Get "text" }}</i></b>
+    {{ else }}
+        <i>{{ .Get "text" }}</i>
+    {{ end }}
+{{ else }}
+    {{ if .Get "bold" }}
+        <b>{{ .Get "text" }}</b>
+    {{ else }}
+        {{ .Get "text" }}
+    {{ end }}
+{{ end }}
+</p>
