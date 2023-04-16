@@ -13,7 +13,7 @@ hideComments = false
 color = "" #color from the theme settings
 +++
 
-my posts
+**POSTS COMING SOON.**
 
 ---
 Go back to the [front page](/).
