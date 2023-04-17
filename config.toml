@@ -1,9 +1,7 @@
 baseURL = "https://amtoine.github.io"
 languageCode = "en-us"
-license = "https://github.com/amtoine/amtoine.github.io/blob/main/LICENSE"
 paginate = 5
 theme = "hugo-theme-terminal"
-title = "My personal website"
 
 [params]
   # dir name of your main content (default is `content/posts`).
