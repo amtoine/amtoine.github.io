@@ -6,7 +6,7 @@ draft: false
 
 I you want to contact me, fell free to:
 - reach me on [*GitHub*](https://github.com/amtoine)
-- DM me on Discord (**antoine#1306**)
+- DM me on Discord at [*amtoine#1306*](https://discordapp.com/users/692113679814099044)
 - send me an [email](mailto:stevan.antoine@gmail.com)
 
 you'll see, i'm friendly *:wink:*
