@@ -6,5 +6,5 @@ draft: false
 
 **ABOUT COMING SOON.**
 
----
+{{< code align="center" text="--------------------------------------------------------------------" >}}
 Go back to the [front page](/).
