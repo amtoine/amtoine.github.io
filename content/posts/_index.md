@@ -1,5 +1,5 @@
 +++
-title = "_Index"
+title = "Posts"
 date = "2023-04-16T15:04:21+02:00"
 author = ""
 authorTwitter = "" #do not include @
