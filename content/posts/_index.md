@@ -2,7 +2,7 @@
 title = "Posts"
 date = "2023-04-16T15:04:21+02:00"
 lastMod = "2023-04-17T19:00:00+00:00"
-author = ""
+author = "amtoine"
 authorTwitter = "" #do not include @
 cover = ""
 tags = ["", ""]
