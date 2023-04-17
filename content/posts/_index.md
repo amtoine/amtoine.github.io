@@ -11,7 +11,7 @@ description = ""
 showFullContent = false
 readingTime = false
 hideComments = false
-color = "" #color from the theme settings
+color = "green" #color from the theme settings
 +++
 
 Below here, I would like to take the time to write some blog posts some day.  
