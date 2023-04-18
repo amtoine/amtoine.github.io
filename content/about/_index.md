@@ -18,7 +18,7 @@ a typical FOSS day unwraps as follows for me:
 - **help the community** a bit during my breaks
 - **chat with the *core team*** once home
 - do **some triage** on new and existing issues
-- **review *P*ull *R*equests**
+- **review** **P**ull **R**equests
 
 and if i have a bit more time (*which happens rarely* :scream:)
 - **implement ideas** i have
