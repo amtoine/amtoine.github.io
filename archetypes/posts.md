@@ -11,7 +11,7 @@ description = "DESCRIPTION"
 showFullContent = false
 readingTime = false
 hideComments = false
-color = "" #color from the theme settings
+color = "green" #color from the theme settings
 +++
 
 NEW POST: {{ replace .Name "-" " " | title }}
