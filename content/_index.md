@@ -9,7 +9,7 @@ draft: false
 {{<image
     src="/res/ewilan.png"
     alt="/res/ewilan.png"
-    title="Wave hand"
+    title="Main banner"
     width="500"
     position="center"
 >}}
