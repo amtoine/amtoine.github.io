@@ -63,6 +63,11 @@ theme = "hugo-theme-terminal"
       url = "/posts"
       weight=3
     [[languages.en.menu.main]]
+      identifier = "tags"
+      name = "All tags"
+      url = "/tags"
+      weight=9000
+    [[languages.en.menu.main]]
       identifier = "license"
       name = "LICENSE"
       url = "/license"
