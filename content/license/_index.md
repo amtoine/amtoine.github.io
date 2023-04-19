@@ -14,7 +14,7 @@ i apply the following license to all (?) my personal projects.
 > - fully free and open source
 > - contagious
 
-{{< code align="center" text="--------------------------------------------------------------------" >}}
+{{< bar >}}
 
 ```text
                     GNU GENERAL PUBLIC LICENSE
@@ -693,5 +693,5 @@ Public License instead of this License.  But first, please read
 <https://www.gnu.org/licenses/why-not-lgpl.html>.
 ```
 
-{{< code align="center" text="--------------------------------------------------------------------" >}}
+{{< bar >}}
 Go back to the [front page](/).

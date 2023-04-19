@@ -20,7 +20,7 @@ of stuff.
 
 # Stay tuned!!
 
-{{< code align="center" text="--------------------------------------------------------------------" >}}
+{{< bar >}}
 Go back to the [front page](/).
 
 [`nushell`]: https://github.com/nushell/nushell

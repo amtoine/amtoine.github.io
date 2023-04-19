@@ -14,5 +14,5 @@ I you want to contact me, fell free to:
 
 you'll see, i'm friendly *:wink:*
 
-{{< code align="center" text="--------------------------------------------------------------------" >}}
+{{< bar >}}
 Go back to the [front page](/).

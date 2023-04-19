@@ -9,7 +9,7 @@ color: "blue"
 
 {{< readme-header >}}
 
-{{< code align="center" text="--------------------------------------------------------------------" >}}
+{{< bar >}}
 
 > **Note**  
 > these days, i'm mostly focused on [`nushell`] :innocent:
@@ -25,7 +25,7 @@ and if i have a bit more time (*which happens rarely* :scream:)
 - work on **personal projects**
 - write posts for my [personal website](https://amtoine.github.io)
 
-{{< code align="center" text="--------------------------------------------------------------------" >}}
+{{< bar >}}
 
 > **Note**  
 > this is actual [NUON] data, which would work in [`nushell`](https://nushell.sh)
@@ -92,7 +92,7 @@ and if i have a bit more time (*which happens rarely* :scream:)
 }
 ```
 
-{{< code align="center" text="--------------------------------------------------------------------" >}}
+{{< bar >}}
 Go back to the [front page](/).
 
 [NUON]: https://www.nushell.sh/book/loading_data.html#nuon
