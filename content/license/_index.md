@@ -14,10 +14,7 @@ i apply the following license to all (?) my personal projects.
 > - fully free and open source
 > - contagious
 
-{{< bar >}}
-
-```text
-                    GNU GENERAL PUBLIC LICENSE
+{{< code language="text" title="GNU GENERAL PUBLIC LICENSE" id="1" expand="Show" collapse="Hide" isCollapsed="false" >}}
                        Version 3, 29 June 2007
 
  Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
@@ -691,7 +688,7 @@ may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <https://www.gnu.org/licenses/why-not-lgpl.html>.
-```
+{{< /code >}}
 
 {{< bar >}}
 Go back to the [front page](/).
