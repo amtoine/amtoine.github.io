@@ -3,6 +3,8 @@ languageCode = "en-us"
 paginate = 5
 theme = "hugo-theme-terminal"
 
+disqusShortname = "amtoine"
+
 [params]
   # dir name of your main content (default is `content/posts`).
   # the list of set content will show up on your index page (baseurl).
