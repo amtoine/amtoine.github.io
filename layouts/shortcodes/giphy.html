@@ -1,0 +1,19 @@
+{{ if .Get "gif" }}
+    <div align="{{ .Get "align" | default "center"}}">
+        <iframe
+            src="https://giphy.com/embed/{{ .Get "gif"}}"
+            width="{{ .Get "width" | default "50%"}}"
+            {{ if .Get "height" }}
+                height="{{ .Get "height" }}"
+            {{ end }}
+            frameBorder="{{ .Get "border" | default 0}}"
+            class="giphy-embed"
+            allowFullScreen
+        ></iframe>
+        <p>
+            <a href="https://giphy.com/gifs/{{ .Get "gif"}}">via GIPHY</a>
+        </p>
+    </div>
+{{ else }}
+  {{ errorf "`gif` is a mandatory prop for the `giphy` shortcode. The issue occured in %q (%q)" .Page.File .Page.Permalink }}
+{{ end }}
