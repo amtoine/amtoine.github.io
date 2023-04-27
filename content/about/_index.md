@@ -1,10 +1,10 @@
 ---
-title: "About"
+author: amtoine
+color: blue
 date: 2023-04-16T14:58:22+02:00
-lastMod: 2023-04-18
 draft: false
-author: "amtoine"
-color: "blue"
+lastMod: 2023-04-18
+title: About
 ---
 
 {{< readme-header >}}
