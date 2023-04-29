@@ -15,3 +15,5 @@ color = "green" #color from the theme settings
 +++
 
 NEW POST: You Shall Not Rebase (**COMING SOON**)
+
+{{< comments >}}
