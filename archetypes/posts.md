@@ -15,3 +15,5 @@ color = "green" #color from the theme settings
 +++
 
 NEW POST: {{ replace .Name "-" " " | title }}
+
+{{< comments >}}
