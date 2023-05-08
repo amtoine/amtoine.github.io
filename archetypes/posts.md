@@ -1,7 +1,7 @@
 +++
 title = "{{ replace .Name "-" " " | title }}"
-date =  {{ .Date }}
-lastMod =  {{ .Date }}
+date = {{ .Date }}
+lastMod = {{ .Date }}
 author = "AUTHOR"
 authorTwitter = "" #do not include @
 cover = ""
