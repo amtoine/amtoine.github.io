@@ -2,14 +2,14 @@
 title = "Who You Gonna Call?"
 date = 2023-05-08T13:36:26+02:00
 lastMod = 2023-05-08T13:36:26+02:00
-author = "AUTHOR"
+author = "@amtoine"
 authorTwitter = "" #do not include @
 cover = ""
-tags = ["TAG1", "TAG2"]
+tags = ["git", "github", "diffs", "reviewing"]
 keywords = ["", ""]
 description = "DESCRIPTION"
 showFullContent = false
-readingTime = false
+readingTime = true
 hideComments = false
 color = "green" #color from the theme settings
 +++
