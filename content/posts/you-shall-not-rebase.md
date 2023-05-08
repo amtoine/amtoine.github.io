@@ -1,7 +1,7 @@
 +++
 title = "You Shall Not Rebase"
-date =  2023-04-18T19:25:49+02:00
-lastMod =  2023-04-18T19:25:49+02:00
+date = 2023-04-18T19:25:49+02:00
+lastMod = 2023-05-08T12:27:03+02:00
 author = "amtoine"
 authorTwitter = "" #do not include @
 cover = "/posts/you-shall-not-rebase.gif"
