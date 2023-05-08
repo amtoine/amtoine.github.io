@@ -1,5 +1,5 @@
 +++
-title = "Who You Gonna Call"
+title = "Who You Gonna Call?"
 date = 2023-05-08T13:36:26+02:00
 lastMod = 2023-05-08T13:36:26+02:00
 author = "AUTHOR"
@@ -14,6 +14,6 @@ hideComments = false
 color = "green" #color from the theme settings
 +++
 
-NEW POST: Who You Gonna Call
+NEW POST: Who You Gonna Call?
 
 {{< comments >}}
