@@ -1,7 +1,7 @@
 +++
 title = "A Nu Alternative to the Old Makefile"
-date =  2023-05-08T12:25:18+02:00
-lastMod =  2023-05-08T12:25:18+02:00
+date = 2023-05-08T12:25:18+02:00
+lastMod = 2023-05-08T12:25:18+02:00
 author = "AUTHOR"
 authorTwitter = "" #do not include @
 cover = ""
