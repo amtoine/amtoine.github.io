@@ -39,16 +39,17 @@ they are not as common most of the time, poorly documented, etc, etc, ...
 {{< bar >}}
 
 ## here comes [Nushell]
-in [Nushell], one can write scripts called *modules*.  
-modules are a bit like regular scripts but integrate in the shell much better
+in [Nushell], one can write scripts called [*modules*][Nushell modules].  
+modules are a bit like [regular *scripts*][Nushell scripts] but integrate
+in the shell much better
 - better `help` pages
 - custom completion
 
 > **Note**  
-> the following will work with the latest revision of `nushell` only.
+> the following will work with the latest revision of `nushell` only.  
 > not the latest release, the latest revision!
 >
-> in fact, on would need to have installed a version of `nushell` after
+> in fact, one would need to have installed a version of `nushell` after
 > [nushell/nushell#9066], e.g. from any branch / commit based on [`a2a346e39`].
 
 the idea here is to define a `toolkit` module to replace any `Makefile` and thus
@@ -75,7 +76,7 @@ use toolkit/  # with a directory module
 let's have a look maybe at the most [Nushell]y `toolkit` of all: the [`nushell` toolkit].
 
 > **Note**  
-> in this section, i use the `toolkit` of the latest revision of `nushell` AT THE TIME I WRITE THIS.
+> in this section, i use the `toolkit` of the latest revision of `nushell` AT THE TIME I WRITE THIS.  
 > it might have changed now :wink:
 
 > **Note**  
@@ -108,21 +109,21 @@ setup-git-hooks [];
 `fmt`, `clippy` and the `test` commands are here to check the source base for
 - bad formatting
 - lint errors
-- failing tests, both for the main source base in Rust and the [standard library] in [Nushell]
+- failing tests, both for the main source base in Rust and the [standard library] written in [Nushell]
 
 `check pr` wraps them all and says if a **PR** will be valid or not.
 
-finally `setup-git-hooks`... well setup `git` hooks :wink:
+finally `setup-git-hooks`... well sets `git` hooks up :wink:
 
 > **Note**  
 > more information is available by running `help toolkit ...`
 
 ### a nice addition: automatic loading of the `toolkit` with *hooks*
 in order to have any `toolkit` available at anytime when i enter a directory containing a `toolkit` module,
-i've written a little *hook*
+i've written a little *hook*.
 
 > **Note**  
-> in [Nushell], a *hook* is a piece of code which runs on some condition, e.g. changing directory,
+> in [Nushell], a [*hook*][Nushell hooks] is a piece of code which runs on some condition, e.g. changing directory,
 > displaying output, ...
 
 for this, i've used the `env_change.PWD` hook, which activates when the environment changes, more precisely
@@ -182,9 +183,18 @@ env_change: {
 }
 {{< /code >}}
 
+{{< bar >}}
+
+## and that's it
+with all this, any time you enter a directory with either a `toolkit.nu` or a `toolkit/` module,
+it will be activated and ready to use, with a little message :relieved:
+
 {{< comments >}}
 
 [Nushell]: https://www.nushell.sh/
+[Nushell modules]: https://www.nushell.sh/book/modules.html
+[Nushell scripts]: https://www.nushell.sh/book/scripts.html
+[Nushell hooks]: https://www.nushell.sh/book/hooks.html
 [nushell/nushell#9066]: https://github.com/nushell/nushell/pull/9066
 [`a2a346e39`]: https://github.com/nushell/nushell/commit/a2a346e39c53e386b97d8d7f9a05ed58298e8789
 [`nushell` toolkit]: https://github.com/nushell/nushell/blob/a2dd948e71c3cbdecfa1a2dbf35282707e151b02/toolkit.nu
