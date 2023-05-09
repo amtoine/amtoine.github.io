@@ -2,6 +2,7 @@ baseURL = "https://amtoine.github.io"
 languageCode = "en-us"
 paginate = 5
 theme = "hugo-theme-terminal"
+enableemoji = true
 
 [params]
   # dir name of your main content (default is `content/posts`).
