@@ -1,7 +1,7 @@
 +++
 title = "You Shall Not Rebase"
 date = 2023-04-18T19:25:49+02:00
-lastMod = 2023-05-08T12:27:03+02:00
+lastMod = 2023-05-18T12:37:37+02:00
 author = "amtoine"
 authorTwitter = "" #do not include @
 cover = "/posts/you-shall-not-rebase.gif"
@@ -40,7 +40,7 @@ before writing a comment, please note that this blog post applies to a particula
 - *trunk-based* development flow, also called *GitHub* flow
   - a main linear trunk of commits, e.g. the `main` or `master` branch in the following
   - anything is developed on a feature branch, e.g. `feature` or `bug-fix` in the following
-  - to merge changes in `main`, everyone goes through a [**P**ull **R**equest (**PR**)][GitHub PR]
+  - to merge changes into `main`, everyone goes through a [**P**ull **R**equest (**PR**)][GitHub PR]
   - changes go through an asynchronous review / approval process
   - changes are rebased on top of the `main` trunk and squashed into a single commit to hide
   implementation details
@@ -49,17 +49,17 @@ before writing a comment, please note that this blog post applies to a particula
 all this blog post is mainly based on my review experience as a member of the core team of [Nushell]
 
 ## `git rebase` is great
-finally this blog post is a little rant about `git rebase` but note that i use these feature all
+finally this blog post is a little rant about `git rebase` but note that i use this feature all
 the time!  
 because it's great... in some cases...
 
 => in the following, we'll focus on **PR** reviews only.
 
-will all of this in mind, let's get started :smirk:
+with all of this in mind, let's get started :smirk:
 
 {{< bar >}}
 
-## why rebase is bad and why you shall not use in
+## why rebase is bad and why you shall not use it
 
 let's start with a little theoretical masterclass, shall we?
 when we use `git` the one and only true object we manipulate is the commit!
@@ -74,17 +74,18 @@ a commit is a box which contains a few information about changes applied to some
 - the commit title and body
 - the parent commit hash
 - ...
+
 with all this information, we can compute the hash of the commit
 
 > **Note**  
 > this hash depends on ALL the information contained in the commit!
 
 rebasing a branch, i.e. a set of commits, on top of another branch or revision
-has the effect of applying each commit, in order, on top of the new branch.
+has the effect of applying each commit, in order, on top of the new base branch or revision.
 1. the first commit has a parent and a hash
 2. we apply it on top of *another* revision
 3. the parent changes and thus its hash too!
-4. we apply the second commit on top of the other
+4. we apply the second commit on top of the first
 5. the hash of the first commit has changed, so does the hash of the second one!
 ...
 and so on.
@@ -94,7 +95,7 @@ running `git rebase`, we have rewritten the history of the worktree!
 now, if there are conflicts in the middle of the rebasing process, one would
 have to solve them
 - it's easy to make mistakes here
-- what are the guarantees that the resolutions did not introduce errors?
+- what are the guarantees that the conflict resolution through `rebase` did not introduce errors?
 
 {{< bar >}}
 
@@ -117,7 +118,7 @@ where `D`, `E` and `F` are three new commits on the main branch and `d` is a **P
 
 two things can happen here:
 1. the `main` and `feature` branches have no conflicts => the **PR** can be merged by *GitHub* without any issue
-2. the `main` branch has now "truely" diverged from the `pr` branch and *GitHub* can't merge...
+2. the `main` branch has now "truely" diverged from the `feature` branch and *GitHub* can't merge...
 
 assume for a minute that @author does a `git rebase` to solve the conflicts (which will eventually solve them!)
 - they pull the `main` branch from `origin` to sync their local `main` onto the `F` commit
@@ -140,7 +141,7 @@ where the `X'` commits are the rebased versions of the `a`, `b`, `c` and `d` com
 > - `a`, `b`, `c` and `d` are now leftover commits, i.e. they are still here locally but no branch points to them.
 > - `a`, `b`, `c` and `d` and their `a'`, `b'`, `c'` and `d'` rebased counterparts ARE different commits!
 
-here, because the history has been rewritten, invalidates the previous reviews and discussions because a
+here, because the history has been rewritten, it invalidates the previous reviews and discussions because a
 reviewer had reviewed `a` ... `d`, not `a'` ... `d'`, which can be very different as you rewrite the history
 during a `git rebase` :scream:
 
@@ -167,7 +168,7 @@ A---B---C(main)---D---E---F(origin/main)
          /                                /
 A---B---C(main)---D---E---F(origin/main)-'
 ```
-where `e'` is conflict-resolution merge commit.
+where `e` is conflict-resolution merge commit.
 - then push your changes to the PR
 ```
           a-------b-------c-------d--------e(me/feature *feature)
@@ -177,7 +178,7 @@ A---B---C(main)---D---E---F(origin/main)-'
 
 with this flow
 - the conflicts are solved in `e`
-- reviewers only have to check that `e'` is valid
+- reviewers only have to check that `e` is valid
 
 :partying_face:
 
