@@ -93,30 +93,7 @@ and if i have a bit more time (*which happens rarely* :scream:)
 ```
 
 {{< bar >}}
-
-## some *Github* stats for fun
-<p align="center">
-  <a href="https://github.com/DenverCoder1/github-readme-streak-stats">
-    <img
-        title="🔥 Get streak stats for your profile at git.io/streak-stats"
-        alt="amtoine' streak"
-        src="https://github-readme-streak-stats.herokuapp.com/?user=amtoine&theme=monokai-metallian&hide_border=true"
-        width="40%"
-    />
-  </a>
-  <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img
-        alt="amtoine' Github Stats"
-        src="https://github-readme-stats.vercel.app/api/?username=amtoine&show_icons=true&count_private=true&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866"
-        width="40%"
-    />
-  </a>
-</p>
-
-![Metrics](https://metrics.lecoq.io/amtoine?template=classic&repositories.affiliations=owner%2C%20collaborator%2C%20organization_member&base.indepth=false&base.hireable=false&config.timezone=Europe%2FCopenhagen&config.display=large)
+Go back to the [front page](/).
 
 [NUON]: https://www.nushell.sh/book/loading_data.html#nuon
 [`nushell`]: https://github.com/nushell
-
-{{< bar >}}
-Go back to the [front page](/).
