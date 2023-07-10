@@ -25,7 +25,7 @@ a typical FOSS day unwraps as follows for me:
 and if i have a bit more time (*which happens rarely* :scream:)
 - **implement ideas** i have
 - work on **personal projects**
-- write posts for my [personal website](https://amtoine.github.io)
+- write posts for my [personal website](https://amtoine.github.io/posts/)
 
 {{< bar >}}
 
