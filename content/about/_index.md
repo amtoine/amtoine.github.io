@@ -11,6 +11,8 @@ title: About
 
 {{< bar >}}
 
+# :pencil2: a typical day... as a FOSS maintainer
+
 > **Note**  
 > these days, i'm mostly focused on [`nushell`] :innocent:
 
@@ -26,6 +28,8 @@ and if i have a bit more time (*which happens rarely* :scream:)
 - write posts for my [personal website](https://amtoine.github.io)
 
 {{< bar >}}
+
+# :shield: my experience
 
 > **Note**  
 > this is actual [NUON] data, which would work in [`nushell`](https://nushell.sh)
