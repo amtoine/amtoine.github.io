@@ -23,8 +23,25 @@ hello there {{<image
     position="center"
 >}}
 
-TODO
+In february 2024, i've started playing [Mario Kart 8 Deluxe] online: it's fun to
+run against bots and complete the full solo _campaign_ but it's even more fun to
+compete against real humans, stronger and stronger as you become better yourself.
+
+As a kind _scientific experiment, i've started recording my points after each
+race.
+In fact, i was just curious to see what the shape of the resulting curve would
+look like over time :yum:
+
+## My personal leaderboard
+{{<image
+    src="/posts/my-mario-kart-8-deluxe-adventure/scores.png"
+    alt="/posts/my-mario-kart-8-deluxe-adventure/scores.png"
+    title="MK8 scores"
+    position="center"
+>}}
 
 {{< bar >}}
 
 {{< comments >}}
+
+[Mario Kart 8 Deluxe]: https://www.nintendo.com/us/store/products/mario-kart-8-deluxe-switch/
