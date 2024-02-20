@@ -17,7 +17,24 @@ with plt.rc_context(colors):
     fig, ax = plt.subplots(nrows=1, ncols=1)
     fig.canvas.manager.full_screen_toggle()
     fig.patch.set_facecolor((31 / 255, 34 / 255, 42 / 255))
-    ax.scatter([day["index"] for day in days], [day["score"] for day in days])
+
+    dates = [day["date"] for day in days]
+    indices = [day["index"] for day in days]
+    scores = [day["score"] for day in days]
+    last_index = max(indices)
+    ax.scatter(indices, scores)
+    for (t, x, y) in zip(dates, indices, scores):
+        if x < last_index * 0.9:
+            offset = (x + 10, y - 100)
+        else:
+            offset = (x - 50, y - 100)
+        ax.annotate(
+            t,
+            (x, y),
+            xytext=offset,
+            arrowprops=dict(arrowstyle="fancy")
+        )
+
     ax.plot(data)
 
 plt.grid(True)
