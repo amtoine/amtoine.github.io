@@ -27,6 +27,10 @@ In february 2024, i've started playing [Mario Kart 8 Deluxe] online: it's fun to
 run against bots and complete the full solo _campaign_ but it's even more fun to
 compete against real humans, stronger and stronger as you become better yourself.
 
+> **Note**  
+> i'll be posting regular updates on that page to make sure the VR plots are up
+> to date!
+
 As a kind _scientific experiment, i've started recording my points after each
 race.
 In fact, i was just curious to see what the shape of the resulting curve would
