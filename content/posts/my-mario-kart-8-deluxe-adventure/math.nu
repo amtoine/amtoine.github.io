@@ -12,3 +12,12 @@ export def "math zip-diff" []: [list<int> -> list<int>, list<float> -> list<floa
 
     $values | zip ($values | skip 1) | each { $in.1 - $in.0 }
 }
+
+export def "math acc" []: [list<int> -> list<int>, list<float> -> list<float>] {
+    let values = $in
+    $values
+        | skip 1
+        | reduce --fold ($values | take 1) {|it, acc|
+            $acc | append ($acc | last | $in + $it)
+        }
+}
