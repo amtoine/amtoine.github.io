@@ -19,6 +19,8 @@ with plt.rc_context(colors):
     fig, ax = plt.subplots(nrows=1, ncols=1)
     fig.canvas.manager.full_screen_toggle()
     fig.patch.set_facecolor((31 / 255, 34 / 255, 42 / 255))
+    ax.xaxis.label.set_color(colors["xtick.color"])
+    ax.yaxis.label.set_color(colors["ytick.color"])
 
     dates = [day["date"] for day in days]
     indices = [day["index"] for day in days]
@@ -38,12 +40,16 @@ with plt.rc_context(colors):
             arrowprops=dict(arrowstyle="fancy")
         )
 
-    ax.plot(data)
+    ax.plot(data, label="my global VR over time")
 
 plt.grid(True)
 
 plt.xlim([0, None])
 plt.ylim([MIN_SCORE, None])
+
+plt.xlabel("race number")
+plt.ylabel("global VR")
+plt.legend()
 
 plt.savefig(
     os.path.join(os.path.dirname(__file__), "scores.png"),
