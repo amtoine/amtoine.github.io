@@ -33,9 +33,9 @@ use content/posts/my-mario-kart-8-deluxe-adventure/math.nu *
 
 let scores = open content/posts/my-mario-kart-8-deluxe-adventure/scores.nuon
     | get score
-let norm_acc_scores = $scores | math zip-diff | math normalize
+let norm_acc_scores = $scores | math zip-diff | math normalize | math acc
 python ...[
     content/posts/my-mario-kart-8-deluxe-adventure/plot-normalized.py,
-    ...($norm_acc_scores | math acc),
+    ...$norm_acc_scores,
 ]
 ```
