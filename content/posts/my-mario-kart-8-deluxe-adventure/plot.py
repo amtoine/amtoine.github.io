@@ -1,8 +1,10 @@
 import matplotlib.pyplot as plt
 import sys
 import os
+import json
 
-data = list(map(int, sys.argv[1:]))
+data = list(map(int, sys.argv[1].split("\n")))
+days = json.loads(sys.argv[2])
 
 colors = {
     "axes.edgecolor": "orange",
@@ -15,6 +17,7 @@ with plt.rc_context(colors):
     fig, ax = plt.subplots(nrows=1, ncols=1)
     fig.canvas.manager.full_screen_toggle()
     fig.patch.set_facecolor((31 / 255, 34 / 255, 42 / 255))
+    ax.scatter([day["index"] for day in days], [day["score"] for day in days])
     ax.plot(data)
 
 plt.grid(True)
