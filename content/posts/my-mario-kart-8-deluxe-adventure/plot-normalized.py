@@ -2,7 +2,8 @@ import matplotlib.pyplot as plt
 import sys
 import os
 
-values = list(map(float, sys.argv[1:]))
+filename = sys.argv[1]
+values = list(map(float, sys.argv[2:]))
 
 colors = {
     "axes.edgecolor": "orange",
@@ -22,6 +23,6 @@ with plt.rc_context(colors):
 plt.grid(True)
 
 plt.savefig(
-    os.path.join(os.path.dirname(__file__), "normalized-scores.png"),
+    os.path.join(os.path.dirname(__file__), filename),
     dpi=500,
 )
