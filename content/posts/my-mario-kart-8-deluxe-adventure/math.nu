@@ -29,5 +29,5 @@ export def "math map" [
     let values = $in
     let m = ($to.a - $to.b) / ($from.a - $from.b)
 
-    $values | each { $m * ($in - $from.a) + $from.a }
+    $values | each { $m * ($in - $from.a) + $to.a }
 }
