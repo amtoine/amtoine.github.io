@@ -21,3 +21,13 @@ export def "math acc" []: [list<int> -> list<int>, list<float> -> list<float>] {
             $acc | append ($acc | last | $in + $it)
         }
 }
+
+export def "math map" [
+    from: record<a: float, b: float>,
+    to: record<a: float, b: float>,
+]: [list<int> -> list<int>, list<float> -> list<float>] {
+    let values = $in
+    let m = ($to.a - $to.b) / ($from.a - $from.b)
+
+    $values | each { $m * ($in - $from.a) + $from.a }
+}
