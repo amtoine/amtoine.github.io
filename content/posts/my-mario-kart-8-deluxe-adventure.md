@@ -44,6 +44,49 @@ look like over time :yum:
     position="center"
 >}}
 
+One might notice that the range of points a player can earn after each course is
+not centered around 0. In fact, as far as i know, the possible values range from
+around 26 when winning a race to -13 when losing.
+
+What happens to the global VR graph when we try to _rectify_ the possible values
+a _point delta_ can take?
+
+#### Normalizing
+The first naive method would be to normalize the _deltas_ so that the
+distribution of values, between 26 and -13, becomes a normal distribution with
+mean 0 and standard deviation 1:
+{{<image
+    src="/posts/my-mario-kart-8-deluxe-adventure/normalized-scores.png"
+    alt="/posts/my-mario-kart-8-deluxe-adventure/normalized-scores.png"
+    title="MK8 normalized scores"
+    position="center"
+>}}
+
+The biggest and immediate flaw with that is that, as the _deltas_ become evenly
+distributed around 0, the overall VR graph stays near 0 :thinking:
+
+However, we can see a few things
+- there has been a steep improvement with the first 50 races
+- then there is a plateau until around the 120th race
+- then there is a negative slope, probably some hard times lol
+- finally the start of another plateau?
+
+#### Rectifying
+Another idea would be to _rectify_ the _deltas_. By that i mean, as i know their
+possible values range from around 26 to -13, it's quite easy to just shift and
+squeeze them inside the range from -1 to 1 and see what it looks like:
+{{<image
+    src="/posts/my-mario-kart-8-deluxe-adventure/rectified-scores.png"
+    alt="/posts/my-mario-kart-8-deluxe-adventure/rectified-scores.png"
+    title="MK8 rectified scores"
+    position="center"
+>}}
+
+This time, it's quite similar to the first graph, except the values are hopefully
+more meaningful, e.g. if i were to only earn a few points in a row, that would
+likely translate into negative points once rectified and thus we would see a
+negative slope rather than a positive one with the official MK8 VR system.
+
 {{< bar >}}
 
 {{< comments >}}

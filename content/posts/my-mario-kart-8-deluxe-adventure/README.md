@@ -27,3 +27,32 @@ python ...[
     ($days | to json),
 ]
 ```
+
+```nushell
+use content/posts/my-mario-kart-8-deluxe-adventure/math.nu *
+
+let scores = open content/posts/my-mario-kart-8-deluxe-adventure/scores.nuon
+    | get score
+let norm_acc_scores = $scores | math zip-diff | math normalize | math acc
+python ...[
+    content/posts/my-mario-kart-8-deluxe-adventure/plot-values.py,
+    "normalized-scores.png",
+    ...$norm_acc_scores,
+]
+```
+
+```nushell
+use content/posts/my-mario-kart-8-deluxe-adventure/math.nu *
+
+python ...[
+    content/posts/my-mario-kart-8-deluxe-adventure/plot-values.py,
+    "rectified-scores.png",
+    ...(
+        open content/posts/my-mario-kart-8-deluxe-adventure/scores.nuon
+            | get score
+            | math zip-diff
+            | math map {a: -13., b: 26.} {a: -1., b: 1.}
+            | math acc
+    )
+]
+```
