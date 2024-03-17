@@ -30,13 +30,15 @@ python ...[
 print "done"
 
 print --no-newline "generating rectified figure... "
+let min = $data.score | math zip-diff | math min | into float
+let max = $data.score | math zip-diff | math max | into float
 python ...[
     ($env.FILE_PWD | path join "plot-values.py"),
     "rectified-scores.png",
     ...(
         $data.score
             | math zip-diff
-            | math map { a: -13., b: 26. } { a: -1., b: 1. }
+            | math map { a: $min, b: $max } { a: -1., b: 1. }
             | math acc
     )
 ]
