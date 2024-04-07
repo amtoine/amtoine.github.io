@@ -87,6 +87,20 @@ more meaningful, e.g. if i were to only earn a few points in a row, that would
 likely translate into negative points once rectified and thus we would see a
 negative slope rather than a positive one with the official MK8 VR system.
 
+#### My score deltas
+Another thing that can be nice to investigate is the distribution of my score deltas.
+
+What is a score delta?
+Here, it's simply the difference between two consecutive VR snapshots, i.e. the amount
+of points i loose or gain after a given race.
+
+{{<image
+    src="/posts/my-mario-kart-8-deluxe-adventure/deltas-distribution.png"
+    alt="/posts/my-mario-kart-8-deluxe-adventure/deltas-distribution.png"
+    title="Score deltas"
+    position="center"
+>}}
+
 {{< bar >}}
 
 {{< comments >}}
