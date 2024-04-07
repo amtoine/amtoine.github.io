@@ -2,6 +2,13 @@ import matplotlib.pyplot as plt
 import sys
 import os
 
+colors = {
+    "axes.edgecolor": "orange",
+    "xtick.color": "red",
+    "ytick.color": "green",
+    "figure.facecolor": "white",
+}
+
 
 if __name__ == "__main__":
     filename = sys.argv[1]
@@ -15,12 +22,17 @@ if __name__ == "__main__":
     else:
         median = sorted(data)[len(data) // 2]
 
-    fig, ax = plt.subplots(nrows=1, ncols=1)
-    fig.canvas.manager.full_screen_toggle()
 
-    density, _, _ = ax.hist(data, bins=nb_uniq_deltas, density=True)
-    ax.vlines(mean, 0, max(density), color="red", label=f"mean: {mean:.2f}")
-    ax.vlines(median, 0, max(density), color="orange", label=f"median: {median}")
+    with plt.rc_context(colors):
+        fig, ax = plt.subplots(nrows=1, ncols=1)
+        fig.canvas.manager.full_screen_toggle()
+        fig.patch.set_facecolor((31 / 255, 34 / 255, 42 / 255))
+        ax.xaxis.label.set_color(colors["xtick.color"])
+        ax.yaxis.label.set_color(colors["ytick.color"])
+
+        density, _, _ = ax.hist(data, bins=nb_uniq_deltas, density=True)
+        ax.vlines(mean, 0, max(density), color="red", label=f"mean: {mean:.2f}")
+        ax.vlines(median, 0, max(density), color="orange", label=f"median: {median}")
 
     ax.set_xlabel("score delta")
     ax.set_ylabel("density")
