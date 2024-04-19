@@ -1,7 +1,7 @@
 +++
 title = "My Mario Kart 8 Deluxe Adventure"
 date = 2024-02-20T10:53:00+02:00
-lastMod = 2024-02-20T10:53:00+02:00
+lastMod = 2024-04-19T19:15:32+02:00
 author = "amtoine"
 authorTwitter = "" #do not include @
 cover = "/posts/my-mario-kart-8-deluxe-adventure.gif"
@@ -98,6 +98,14 @@ of points i loose or gain after a given race.
     src="/posts/my-mario-kart-8-deluxe-adventure/deltas-distribution.png"
     alt="/posts/my-mario-kart-8-deluxe-adventure/deltas-distribution.png"
     title="Score deltas"
+    position="center"
+>}}
+
+And here is the evolution of the deltas distribution over time:
+{{<image
+    src="/posts/my-mario-kart-8-deluxe-adventure/deltas-distribution.gif"
+    alt="/posts/my-mario-kart-8-deluxe-adventure/deltas-distribution.gif"
+    title="Score deltas animation"
     position="center"
 >}}
 
