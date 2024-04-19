@@ -44,11 +44,20 @@ python ...[
 ]
 print "done"
 
-print --no-newline "generating deltas distribution figure... "
 let deltas = $data.score | math zip-diff
+
+print --no-newline "generating deltas distribution figure... "
 python ...[
     ($env.FILE_PWD | path join "plot-bars.py"),
     "deltas-distribution.png",
+    ...$deltas,
+]
+print "done"
+
+print --no-newline "generating deltas distribution animation... "
+python ...[
+    ($env.FILE_PWD | path join "animate-bars.py"),
+    "deltas-distribution.gif",
     ...$deltas,
 ]
 print "done"
