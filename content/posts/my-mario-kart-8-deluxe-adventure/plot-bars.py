@@ -17,10 +17,7 @@ if __name__ == "__main__":
 
     nb_uniq_deltas = len(set(data))
     mean = sum(data) / len(data)
-    if len(data) % 2 == 0:
-        median = sorted(data)[len(data) / 2]
-    else:
-        median = sorted(data)[len(data) // 2]
+    median = sorted(data)[len(data) // 2]
 
 
     with plt.rc_context(colors):
