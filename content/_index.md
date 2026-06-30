@@ -14,6 +14,9 @@ draft: false
     position="center"
 >}}
 
+> This account is no longer active and does not plan to go back on GitHub for personal use...
+> Please visit https://astevan.codeberg.page/ instead ! :)
+
 # Welcome to my personal website.
 {{<image
     src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif"
